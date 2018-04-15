@@ -17,6 +17,7 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
   Book.prototype.toHtml = function() {
     var template = Handlebars.compile($('#book-list-template').text());
+    console.log('in html');
     return template(this);
   };
 
