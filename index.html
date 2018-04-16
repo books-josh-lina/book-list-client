@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lab 11</title>
-    <link rel="stylesheet" href="vendor/styles/reset.css">
-    <link rel="stylesheet" href="vendor/styles/icons.css">
+    <title>Books App</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     
     <script id="book-list-template" type="text/x-handlebars-template">
-      <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+      <article class="book" data-author="{{author}}" data-category="{{category}}">
         <header>
-          <h1>{{title}}</h1>
+          <h1>Title:</h1>
+          <h2>{{author}}</h2>
           <div class="byline">
-            Author <address><a href="{{authorUrl}}">{{author}}</a></address>
+            Author:<address><a href="{{authorUrl}}">{{title}}</a></address>
           </div>
         </header>
       </article>
@@ -23,12 +24,13 @@
   </head>
 
   <body>
-    <main class="clearfix">
-      <h1>Book Stats</h1>
-      <section id="book-stats1">
+    <main>
+      
+      <!-- <section id="book-stats1">
         <dt><h1>Available books by Author and title:</h1></dt> <dd class="booksby"></dd>
-        <dt><h1>Total books:</h1></dt><dd class="total"></dd>
-        
+        <dt><h1>Total books:</h1></dt><dd class="total"></dd> -->
+        <section id="book-stats1">
+        <h1>My Books:</h1>
         <ul class="book-stats2">
         </ul>
       </section>

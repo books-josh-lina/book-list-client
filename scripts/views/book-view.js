@@ -8,14 +8,14 @@ var app = app || {};
   bookView.initIndexPage = function() {
     $('.container').hide();
     $('.book-view').show();
-    console.log('init index page');
+    // console.log('init index page');
     app.Book.all.map(book => $('.book-stats2').append(book.toHtml()));
   }
   module.bookView = bookView;
 })(app)
 
 $(function() {
-  console.log('in IIFE');
+  // console.log('in IIFE');
   app.Book.fetchAll(app.bookView.initIndexPage);
 })
 

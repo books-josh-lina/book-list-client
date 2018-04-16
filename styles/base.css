@@ -1,0 +1,22 @@
+section {
+    padding-top: 1em;
+    text-align: center;
+}
+
+/* ul .bookstats2{
+
+    align-self: auto;
+} */
+
+article.book {
+    width: 90%;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    border: solid .1em grey;
+    background-color: gainsboro;
+}
+
+.byline {
+    font-size: .6em;
+}

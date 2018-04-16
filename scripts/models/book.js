@@ -1,12 +1,13 @@
 'use strict';
-
 var app = app || {};
+
 const ENV = {};
 
 ENV.isProduction = window.location.protocol === 'https:';
 ENV.productionApiUrl = 'https://jpm-lm-tc-booklist.herokuapp.com';
 ENV.developmentApiUrl = 'http://localhost:3000';
 ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
+// console.log('is ' + ENV);
 
 (function(module) {
   function Book(rawDataObj) {
@@ -17,7 +18,7 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
   Book.prototype.toHtml = function() {
     var template = Handlebars.compile($('#book-list-template').text());
-    console.log('in html');
+    // console.log('in html');
     return template(this);
   };
 
@@ -25,13 +26,15 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
   Book.loadAll = rows => {
     Book.all = rows.sort((a,b) => b.title - a.title).map(book => new Book(book));
+    // console.log(Book.all)
   }
 
+  
   Book.fetchAll = callback => {
     $.get(`${ENV.apiUrl}/api/v1/books`)
       .then(Book.loadAll)
       .then(callback)
-      .catch(app.errorCallback)  
+      .catch(app.errorCallback);
   }
   module.Book = Book;
 })(app)
