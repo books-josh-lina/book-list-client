@@ -7,6 +7,7 @@ ENV.isProduction = window.location.protocol === 'https:';
 ENV.productionApiUrl = 'https://jpm-lm-tc-booklist.herokuapp.com';
 ENV.developmentApiUrl = 'http://localhost:3000';
 ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
+console.log('is ' + ENV);
 
 (function(module) {
   function Book(rawDataObj) {
@@ -31,7 +32,7 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
     $.get(`${ENV.apiUrl}/api/v1/books`)
       .then(Book.loadAll)
       .then(callback)
-      .catch(app.errorCallback)  
+      .catch(app.errorCallback);
   }
   module.Book = Book;
 })(app)
