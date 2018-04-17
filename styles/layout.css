@@ -27,4 +27,18 @@
     width: 40%;
   }
 
+  .authorfooter{
+    background-color: #4A4A4A;
+  }
+
+  footer{
+    width: 93%;
+    height: 10em;
+    background-color:#727272;;
+  }
+
+  .imagefooter {
+    float:right;
+    padding: .5em;
+  }
 }

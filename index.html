@@ -14,10 +14,11 @@
       <article class="book" data-author="{{author}}" data-category="{{category}}">
         <header>
           <img class="bookcovers" src="{{image_url}}">
-          <!-- <h1>book title</h1> -->
-          <h2 class="title">{{author}}</h2>
-          <div class="byline">
-            <address><a href="{{authorUrl}}">{{title}}</a></address>
+          <div class="authorfooter">
+            <h2 class="title">{{author}}</h2>
+            <div class="byline">
+              <address>{{title}}</address>
+            </div>
           </div>
         </header>
       </article>
@@ -36,7 +37,11 @@
            <ul class="book-stats2"></ul>
       </section>
     </main>
-    
+    <footer>
+        <img class="imagefooter" src="images/linkedin.svg"/>
+        <img class="imagefooter" src="images/github.svg"/>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src='./scripts/models/book.js'></script>
