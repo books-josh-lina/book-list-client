@@ -1,0 +1,30 @@
+@media only screen and (max-width:640px ) {
+
+  .header1 {
+    padding-top: 2%;
+  }
+  .codefellows {
+    width: 50px;
+    float: left;
+    padding-left: 4%;
+
+  }
+  #cfbooks {
+    font-size: 1.5em;
+    padding-left: 12%;
+    padding-top:2%;
+  }
+  
+  .book-stats1 {
+    text-decoration: underline;
+    font-size: 1.8em;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: inline-block;
+  }
+
+  .bookcovers{
+    width: 40%;
+  }
+
+}

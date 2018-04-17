@@ -3,11 +3,6 @@ section {
     text-align: center;
 }
 
-/* ul .bookstats2{
-
-    align-self: auto;
-} */
-
 article.book {
     width: 90%;
     padding-top: 1em;
@@ -18,5 +13,12 @@ article.book {
 }
 
 .byline {
-    font-size: .6em;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.title{
+    padding-top: 2%;
+    font-size: 2em;
+    padding-bottom: 2%;
 }
