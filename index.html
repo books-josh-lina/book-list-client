@@ -13,10 +13,12 @@
     <script id="book-list-template" type="text/x-handlebars-template">
       <article class="book" data-author="{{author}}" data-category="{{category}}">
         <header>
-          <h1>Title:</h1>
-          <h2>{{author}}</h2>
-          <div class="byline">
-            Author:<address><a href="{{authorUrl}}">{{title}}</a></address>
+          <img class="bookcovers" src="{{image_url}}">
+          <div class="authorfooter">
+            <h2 class="title">{{author}}</h2>
+            <div class="byline">
+              <address>{{title}}</address>
+            </div>
           </div>
         </header>
       </article>
@@ -25,17 +27,21 @@
 
   <body>
     <main>
-      
-      <!-- <section id="book-stats1">
-        <dt><h1>Available books by Author and title:</h1></dt> <dd class="booksby"></dd>
-        <dt><h1>Total books:</h1></dt><dd class="total"></dd> -->
-        <section id="book-stats1">
-        <h1>My Books:</h1>
-        <ul class="book-stats2">
-        </ul>
+        <div class="header1">
+           <img class = "codefellows" src="images/CODEFELLOWS.png"/><p id="cfbooks">books app</p>
+        </div>
+        <section class="book-stats1">
+          <h1>my books</h1>
+        </section>
+        <section>
+           <ul class="book-stats2"></ul>
       </section>
     </main>
-    
+    <footer>
+        <img class="imagefooter" src="images/linkedin.svg"/>
+        <img class="imagefooter" src="images/github.svg"/>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src='./scripts/models/book.js'></script>
