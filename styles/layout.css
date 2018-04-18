@@ -29,11 +29,13 @@
   }
 
   .authorfooter{
+    width:100%;
     background-color: #4A4A4A;
+    
   }
 
   footer{
-    width: 93%;
+    width: 100%;
     height: 10em;
     background-color:#727272;;
   }
